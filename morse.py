@@ -1,15 +1,15 @@
-#A class to implement a Node / Tree 
+#This class is to implement a Node or Tree
 class Node:
-  def __init__(self, value, left=None, right=None):
-    self.value = value
+  def __init__(self, char, left=None, right=None):
+    self.char = char
     self.left = left
     self.right = right
     
-#Convert Character (Find the character using a pre-order traversal of the Binary Tree
+#Convert Character by finding the character using a pre-order traversal of the Binary Tree
 def getMorseCode(node, character, code):
   if node==None:
     return False
-  elif node.value==character:
+  elif node.char==character:
     return True
   else:  
     if getMorseCode(node.left,character,code)==True:
@@ -19,20 +19,20 @@ def getMorseCode(node, character, code):
       code.insert(0,"-")
       return True
       
-#initialise our binary tree:
-tree = Node("START") #The root node of our binary tree
+#initialise the binary tree with the root node
+tree = Node("START")
 
-# 1st Level
+# 1st Level of the binary tree
 tree.left = Node("E")
 tree.right = Node("T")
 
-# 2nd Level
+# 2nd Level of the binary tree
 tree.left.left = Node("I")
 tree.left.right = Node("A")
 tree.right.left = Node("N")
 tree.right.right = Node("M")
 
-# 3rd Level
+# 3rd Level of the binary tree
 tree.left.left.left = Node("S")
 tree.left.left.right = Node("U")
 tree.left.right.left = Node("R")
@@ -43,7 +43,7 @@ tree.right.left.right = Node("K")
 tree.right.right.left = Node("G")
 tree.right.right.right = Node("O")
 
-# 4th Level
+# 4th Level of the binary tree
 tree.left.left.left.left = Node("H")
 tree.left.left.left.right = Node("V")
 tree.left.left.right.left = Node("F")
@@ -62,11 +62,11 @@ tree.right.right.left.right = Node("Q")
 tree.right.right.right.left = Node("")
 tree.right.right.right.right = Node("")
 
-#Message Input
-message = input("Enter a message to convert into Morse Code: (e.g. IOT)").upper()
+#Print the input message
+message = input("Enter the message to be converted into Morse Code: (e.g. IOT)").upper()
 morseCode = ""
 
-#Convert the message, one character at a time!
+#Convert the message with one character at a time
 for character in message:
   dotsdashes = []
   getMorseCode(tree,character,dotsdashes)

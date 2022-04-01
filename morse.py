@@ -62,12 +62,11 @@ tree.right.right.left.right = Node("Q")
 tree.right.right.right.left = Node("")
 tree.right.right.right.right = Node("")
 
-#Print the input message
-message = input("Enter the message to be converted into Morse Code: (e.g. IOT)").upper()
-morseCode = ""
+#Insert the message to be encoded
+morseCode = "IOT "
 
 #Convert the message with one character at a time
-for character in message:
+for character in morseCode:
   dotsdashes = []
   getMorseCode(tree,character,dotsdashes)
   code = "".join(dotsdashes)

@@ -75,3 +75,9 @@ for character in message:
   
 print(morseCode)
 
+def decode(node, str):
+    decoded_msg = "IOT"
+    morseCode = str.split(' ')
+    for m_code in morseCode:
+        decoded_msg += node.gen_Msg(m_code)
+    return decoded_msg

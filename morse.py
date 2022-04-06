@@ -63,13 +63,15 @@ tree.right.right.right.left = Node("")
 tree.right.right.right.right = Node("")
 
 #Insert the message to be encoded
-morseCode = "IOT "
+message = input("Enter a message to convert into Morse Code (e.g. FOONYEE): ").upper()
+morseCode = ""
 
 #Convert the message with one character at a time
-for character in morseCode:
-  dotsdashes = []
-  getMorseCode(tree,character,dotsdashes)
-  code = "".join(dotsdashes)
+for character in message:
+  dotsanddashes = []
+  getMorseCode(tree,character,dotsanddashes)
+  code = "".join(dotsanddashes)
   morseCode = morseCode + code + " "
   
 print(morseCode)
+

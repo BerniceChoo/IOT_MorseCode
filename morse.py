@@ -85,6 +85,7 @@ root.dash.dash.dash.dash.dot = Node('9')
 root.dash.dash.dash.dash.dash = Node('0')
 
 # 6th Level of the binary tree
+# most of the puntuations and symbols (worksheet2 task 4) are in this level
 root.dot.dot.dash.dash.dot.dash = Node('_')
 root.dot.dot.dot.dash.dot.dot = Node('NULL')
 root.dot.dash.dot.dot.dash.dot = Node('"')
@@ -103,7 +104,7 @@ root.dot.dot.dash.dash.dot.dash = Node('_')
 
 encode = "FOON "
 
-#Convert the message with one character at a time
+#Convert the message to morse with one character at a time
 for character in encode:
   dotsanddashes = []
   getMorseCode(root,character,dotsanddashes)
@@ -113,6 +114,7 @@ for character in encode:
 print("\nBelow are encode of ")
 print(encode)
 
+#decode from morse's to messages
 def decode(tree, morse):
     current = tree
     
@@ -157,3 +159,80 @@ print("\nBelow are decode of ..-. -.--")
 outputdecode = morsestring(root, "..-. -.--") 
 print (outputdecode)
 print("\n")
+
+
+#codes for testing in worksheet 2 part 2 (worksheet 2 task 3)
+def isEmpty(root):
+    if root:
+        return False
+    else:
+        if root.dot or root.dash:
+            return False
+
+        if root.dot != None or root.dash != None:
+            return (isEmpty(root.dot) and isEmpty(root.dash))
+
+        return True
+
+def preorderInsert(root, input):
+    if root.dot == None:
+        root.dot = Node(input)
+        return True
+    elif root.dash == None:
+        root.dash = Node(input)
+        return True
+    else:
+        if preorderInsert(root.dot, input) == True:
+            return True
+        if preorderInsert(root.dash, input) == True:
+            return True
+    return False
+
+def deletePreorder(root, char):
+    if root == None:
+        return False
+    elif root.char == char:
+        root.char == None
+        print(char, "has been deleted from the tree")
+        return True
+    else:
+        if deletePreorder(root.dot, char) == True:
+            return True
+        elif deletePreorder(root.dash, char) == True:
+            return True
+    return False
+
+def preorderSearch(root, char):
+    if root == None:
+        return False
+    elif root.char == char:
+        print(char, "has been found")
+        return True
+    else:
+        if preorderSearch(root.dot, char) == True:
+            return True
+        elif preorderSearch(root.dash, char) == True:
+            return True
+    return False
+
+
+# Functions for testing in worksheet 2 Task 3
+def checkIsEmpty():
+    return isEmpty(root)
+
+def checkIsNotEmpty():
+    return not isEmpty(root)
+
+def insert(input):
+    input.upper()
+    if find(input) == True:
+        return False
+    else:
+        return preorderInsert(root, input)
+    
+def delete(input):
+    return deletePreorder(root, input)
+
+def find(input):
+    input.upper()
+    return preorderSearch(root, input)

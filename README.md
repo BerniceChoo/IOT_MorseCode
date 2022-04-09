@@ -96,8 +96,8 @@ Also, I’ve added tests for the binary tree implementation which test:
 5. find function
 
  
-      # Other tests
-      # Test tree
+            # Other tests
+            # Test tree
         def test_isTreeEmpty(self):
             self.assertEqual(morse.checkIsEmpty(), False)
 

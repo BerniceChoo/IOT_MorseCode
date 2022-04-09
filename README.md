@@ -9,7 +9,7 @@ After clicking on it, it will direct me to the webserver where I am able to ente
 
 ![Localhost:10105](image/localhost.png)
 
-#######
+![texttomorse](image/texttomorse.png)
 
 Above image shows ‘fy’ to morse code on port 10105
 
@@ -38,7 +38,7 @@ In this task, where the primary code, morse.py includes the binary tree, encode 
 
 There is a total of 7 levels in the binary tree. The codes for the binary tree is based on the diagram provided in the worksheet where it started with ‘START’ and then split into 2 part which is left and right, where dots are left and dashed are right.
 
-######
+![binarytree](image/binarytree.png)
 
 ##### Encode
 
@@ -72,13 +72,13 @@ addition functions are in morse.py as requested in task 3
          return preorderSearch(root, input)
 
 The below image is the output of morse.py where it encodes the message FOON and decodes ‘..-. -.—'
-#####
+![morseoutput](image/morseoutput.png)
 
 #### Task 3
 Unit test is used for testing a unit, which is the smallest amount of code in a system that can be logically separated. That is a function, a subroutine, a method, or a property in most programming languages. It's crucial to focus on the solitary component of the term.
 
 Below image is the output of assert_tests.py
-#####
+![assert_testsoutput](image/assert_testsoutput.png)
 
 There are 5 tests for encoding and 5 for decoding. The pictures below are 2 of the test functions out of 10. 
 
@@ -133,6 +133,7 @@ Also, I’ve added tests for the binary tree implementation which test:
         def test_find_fail(self):
             self.assertEqual(morse.find('choo'), True)
 
+![morseunitoutput](image/morseunitoutput.png)
 #### Task 4
 
 Most of the punctuations and symbols are in the 5th and 6th level of the binary tree as there are 6 characters for its morse code. Meanwhile ‘&’ and ‘_’ are in the 7th level of the binary tree. This is because both of the symbols have 7 characters in morse codes

@@ -94,6 +94,7 @@ Also, I’ve added tests for the binary tree implementation which test:
 3. the insert function 
 4. the delete function 
 5. find function
+
  
       # Other tests
       # Test tree

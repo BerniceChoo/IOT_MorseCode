@@ -69,3 +69,63 @@ addition functions are in morse.py as requested in task 3
          input.upper()
          return preorderSearch(root, input)
 
+The below image is the output of morse.py where it encodes the message FOON and decodes ‘..-. -.—'
+#####
+
+#### Task 3
+Unit test is used for testing a unit, which is the smallest amount of code in a system that can be logically separated. That is a function, a subroutine, a method, or a property in most programming languages. It's crucial to focus on the solitary component of the term.
+
+Below image is the output of assert_tests.py
+#####
+
+There are 5 tests for encoding and 5 for decoding. The pictures below are 2 of the test functions out of 10. 
+
+   class TestMorse(unittest.TestCase):
+    def test_encode_us(self):
+        self.assertEqual( morse.encode('us'), '..- ...')
+
+    def test_encode_fy(self):
+        self.assertEqual( morse.encode('FY'), '..-. -.--')
+
+Also, I’ve added tests for the binary tree implementation which test: 
+
+– that a tree is correctly empty 
+– that a tree is not empty 
+– the insert function 
+– the delete function 
+– find function
+ 
+      # Other tests
+      # Test tree
+    def test_isTreeEmpty(self):
+        self.assertEqual(morse.checkIsEmpty(), False)
+
+    def test_isTreeNotEmpty(self):
+        self.assertEqual(morse.checkIsNotEmpty(), True)
+
+    # Test insertion
+    def test_insert_false(self):
+        self.assertEqual(morse.insert('E'), False)
+
+    def test_insert_true(self):
+        self.assertEqual(morse.insert('choo'), True)
+
+    # Tests Deletion
+    def test_delete_true(self):
+        self.assertEqual(morse.delete('E'), True)
+
+    def test_delete_false(self):
+        self.assertEqual(morse.delete('choo'), False)
+
+    def test_delete_fail(self):
+        self.assertEqual(morse.delete('choo'), True)
+
+    # Test Search
+    def test_find_true(self):
+        self.assertEqual(morse.find('E'), True)
+
+    def test_find_false(self):
+        self.assertEqual(morse.find('choo'), False)
+
+    def test_find_fail(self):
+        self.assertEqual(morse.find('choo'), True)

@@ -49,18 +49,18 @@ As an argument, the decoding function will accept the morse to decode as a strin
 addition functions are in morse.py as requested in task 3
 
     # Functions for testing in worksheet 2 Task 3
- def checkIsEmpty():
-    return isEmpty(root)
+      def checkIsEmpty():
+         return isEmpty(root)
 
- def checkIsNotEmpty():
-    return not isEmpty(root)
+      def checkIsNotEmpty():
+         return not isEmpty(root)
 
- def insert(input):
-    input.upper()
-    if find(input) == True:
+      def insert(input):
+         input.upper()
+         if find(input) == True:
         return False
-    else:
-        return preorderInsert(root, input)
+         else:
+         return preorderInsert(root, input)
     
  def delete(input):
     return deletePreorder(root, input)

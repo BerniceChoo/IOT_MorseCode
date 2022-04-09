@@ -161,7 +161,7 @@ print (outputdecode)
 print("\n")
 
 
-#codes for testing in worksheet 2 part 2 (worksheet 2 task 3)
+#codes for testing in worksheet 2 task 3
 def isEmpty(root):
     if root:
         return False

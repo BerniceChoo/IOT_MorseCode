@@ -11,8 +11,7 @@ After clicking on it, it will direct me to the webserver where I am able to ente
 
 In this task, where the primary code, morse.py includes the binary tree, encode and decode functions, and some binary tree testing functions for unit testing in task 3.
 
-`#initialise the binary tree with the root node
-root = Node("START")
+`root = Node("START")
 
 # 1st Level of the binary tree
 root.dot = Node('E')

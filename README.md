@@ -98,35 +98,35 @@ Also, I’ve added tests for the binary tree implementation which test:
  
       # Other tests
       # Test tree
-    def test_isTreeEmpty(self):
-        self.assertEqual(morse.checkIsEmpty(), False)
+        def test_isTreeEmpty(self):
+            self.assertEqual(morse.checkIsEmpty(), False)
 
-    def test_isTreeNotEmpty(self):
+        def test_isTreeNotEmpty(self):
         self.assertEqual(morse.checkIsNotEmpty(), True)
 
-    # Test insertion
-    def test_insert_false(self):
-        self.assertEqual(morse.insert('E'), False)
+        # Test insertion
+        def test_insert_false(self):
+            self.assertEqual(morse.insert('E'), False)
 
-    def test_insert_true(self):
-        self.assertEqual(morse.insert('choo'), True)
+        def test_insert_true(self):
+            self.assertEqual(morse.insert('choo'), True)
 
-    # Tests Deletion
-    def test_delete_true(self):
-        self.assertEqual(morse.delete('E'), True)
+        # Tests Deletion
+        def test_delete_true(self):
+            self.assertEqual(morse.delete('E'), True)
 
-    def test_delete_false(self):
-        self.assertEqual(morse.delete('choo'), False)
+        def test_delete_false(self):
+            self.assertEqual(morse.delete('choo'), False)
 
-    def test_delete_fail(self):
-        self.assertEqual(morse.delete('choo'), True)
+        def test_delete_fail(self):
+            self.assertEqual(morse.delete('choo'), True)
 
-    # Test Search
-    def test_find_true(self):
-        self.assertEqual(morse.find('E'), True)
+        # Test Search
+        def test_find_true(self):
+            self.assertEqual(morse.find('E'), True)
 
-    def test_find_false(self):
-        self.assertEqual(morse.find('choo'), False)
+        def test_find_false(self):
+            self.assertEqual(morse.find('choo'), False)
 
-    def test_find_fail(self):
-        self.assertEqual(morse.find('choo'), True)
+        def test_find_fail(self):
+            self.assertEqual(morse.find('choo'), True)

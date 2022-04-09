@@ -31,7 +31,7 @@ root.dot.dash = Node('A')
 root.dash.dot = Node('N')
 root.dash.dash =Node('M')
 
-# 3rd Level of the binary tree - Left
+# 3rd Level of the binary tree
 root.dot.dot.dot = Node('S')
 root.dot.dot.dash = Node('U')
 root.dot.dash.dot = Node('R')

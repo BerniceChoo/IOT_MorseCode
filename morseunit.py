@@ -36,6 +36,13 @@ class TestMorse(unittest.TestCase):
     #fail test 3
     def test_decode_us(self):
         self.assertEqual( morse.encode('..... .. .. ....'), 'FAIL3')
+
+    # Task 4 Testing
+    def test_encode_task4(self):
+        self.assertEqual(morse.encode('(+&,:"!)'), '-.--. .-.-. .-... --..-- ---... .-..-. -.-.-- -.--.-')
+
+    def test_decode_task4(self):
+        self.assertEqual(morse.decode('-.--. .-.-. .-... --..-- ---... .-..-. -.-.-- -.--.-'), '(+&,:"!)')
         
 
 if __name__ == '__main__':

@@ -89,11 +89,11 @@ There are 5 tests for encoding and 5 for decoding. The pictures below are 2 of t
 
 Also, I’ve added tests for the binary tree implementation which test: 
 
-– that a tree is correctly empty 
-– that a tree is not empty 
-– the insert function 
-– the delete function 
-– find function
+1. that a tree is correctly empty 
+2. that a tree is not empty 
+3. the insert function 
+4. the delete function 
+5. find function
  
       # Other tests
       # Test tree

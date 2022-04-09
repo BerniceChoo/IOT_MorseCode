@@ -130,3 +130,35 @@ Also, I’ve added tests for the binary tree implementation which test:
 
         def test_find_fail(self):
             self.assertEqual(morse.find('choo'), True)
+
+#### Task 4
+
+Most of the punctuations and symbols are in the 5th and 6th level of the binary tree as there are 6 characters for its morse code. Meanwhile ‘&’ and ‘_’ are in the 7th level of the binary tree. This is because both of the symbols have 7 characters in morse codes
+
+The codes below shows 5th, 6th and 7th levels of the binary tree in morse.py
+
+    # 6th Level of the binary tree
+    # most of the puntuations and symbols (worksheet2 task 4) are in this level
+    root.dot.dot.dash.dash.dot.dash = Node('_')
+    root.dot.dot.dot.dash.dot.dot = Node('NULL')
+    root.dot.dash.dot.dot.dash.dot = Node('"')
+    root.dot.dash.dot.dash.dot.dash = Node('.')
+    root.dot.dash.dash.dash.dash.dash = Node('-')
+    root.dot.dash.dash.dash.dash.dot = Node("'")
+    root.dash.dot.dash.dot.dash.dot = Node(';')
+    root.dash.dot.dash.dot.dash.dash = Node('!')
+    root.dash.dot.dash.dash.dot.dash = Node(')')
+    root.dash.dash.dot.dot.dash.dash= Node(',')
+    root.dash.dash.dash.dot.dot.dot = Node(':')
+
+    # 7th Level of the binary tree
+    root.dot.dot.dot.dash.dot.dot.dash = Node('$')
+    root.dot.dot.dash.dash.dot.dash = Node('_')
+
+and Unit test for punctuations and symbols in morseunit.py
+    # Task 4 Testing
+    def test_encode_task4(self):
+    self.assertEqual(morse.encode('(+&,:"!)'), '-.--. .-.-. .-... --..-- ---... .-..-. -.-.-- -.--.-')
+
+    def test_decode_task4(self):
+    self.assertEqual(morse.decode('-.--. .-.-. .-... --..-- ---... .-..-. -.-.-- -.--.-'), '(+&,:"!)')

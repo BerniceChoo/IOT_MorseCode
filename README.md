@@ -7,7 +7,7 @@ I have use SSH to redirect the port (10105) to my local system in order to conne
 
 After clicking on it, it will direct me to the webserver where I am able to enter text to encode and vice versa. There I will get the result of the morse code. An example is shown below, where after encoding ‘fy’, it will become  ‘..-. -.--’ in port 10105.
 
-#######
+![Localhost:10105](images/localhost.png)
 
 #######
 
